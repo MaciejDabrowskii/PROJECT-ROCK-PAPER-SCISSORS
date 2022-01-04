@@ -33,7 +33,7 @@ function compare(playerChoice, computerChoice) {
 // tablica zbierajaca wyniki rund
 let wyniki = []; 
 // pojemnik na ostateczny wynik z 5 rund
-let wynikOstateczny = null;
+let wynikOstateczny = 0;
 // funkcja przeprowadzajaca gre
 function gra() {
     for (let i = 0; i < 5; i++) {
@@ -46,11 +46,11 @@ function gra() {
     }
     winnerCheck();
 }
-// funkcja sprawdzajaca ostatecznego zwyciesce z 5 rund
+// funkcja sprawdzajaca ostatecznego zwyciezce z 5 rund
 function winnerCheck() {
     for (let j = 0; j < wyniki.length; j++) {
         if (wyniki[j] === "win") {
-            wynikOstateczny = +1;
+            wynikOstateczny += 1;
         } else if (wyniki[j] === "loose") {
             wynikOstateczny = -1;
         }
