@@ -64,7 +64,7 @@ function winnerCheck() {
             if (wyniki[j][1] === "win") {
                 wynikOstateczny += 1;
             } else if (wyniki[j][1] === "loose") {
-                wynikOstateczny = -1;
+                wynikOstateczny -= 1;
             }
         }
         const h1 = document.createElement('h1');
